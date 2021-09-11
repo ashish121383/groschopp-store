@@ -1,0 +1,371 @@
+/*
+Theme Name: Groschopp V2
+*/
+
+/* implement */
+
+.navigation .next{
+	float:right;
+	margin:0px;
+}
+.navigation .prev {
+	float:left;
+	margin:0px;
+}
+#content .meta ul{
+	list-style:none;
+	padding:0 0 10px;
+	margin:0 0 10px;
+}
+#comments, #respond{
+	margin:0px;
+	padding:0px;
+}
+#respond textarea#comment{
+	width:430px;
+}
+fieldset{
+	border:none;
+}
+#products th {
+	background-color: #EFEFEF;
+}
+#products td {
+	border-bottom: solid 1px #CCC;
+}
+#products td:hover {
+    cursor: pointer;
+}
+#content ul {
+	padding: 10px 15px;
+}
+#content ul.menu {
+	padding:0;
+}
+#content ul li strong.option {
+	font-weight: bold;
+}
+#content form ul {
+	padding: 0px;
+}
+form ul li {
+	list-style-type: none;
+	padding: 5px;
+}
+form ul li.alt {
+	background: #EFEFEF;
+	border-bottom: solid 1px #CCC;
+}
+form ul li label {
+	padding-top: 8px;
+	padding-right: 15px;
+	width: 122px;
+	display: block;
+	float: left;
+	text-align: right;
+	font-size: 14px;
+}
+form ul li label small {
+	float: right;
+}
+form ul li textarea {
+	padding: 4px;
+	width: 350px;
+	height: 150px;
+}
+form ul li input[type=text] {
+	padding: 7px;
+	width: 220px;
+}
+form ul li ul {
+	margin-left: 132px;
+}
+form #product-list {
+	margin-left: 115px;
+	padding: 0px !important;
+}
+form #product-list li {
+	padding: 11px 0px 5px;
+	display: inline-block;
+}
+form #product-list input[type=radio] {
+	float: left;
+}
+form #product-list label {
+	margin-top: -2px;
+	padding: 0 0 0 10px;
+	text-align: left;
+}
+#page-quote {
+	position: relative;
+}
+#selected-prods {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 15px;
+	background: #fffcf3;
+	border: 1px solid #ebb716;
+}
+#selected-prods h3 {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #ebb716;
+}
+#selected-prods ul {
+	list-style: none;
+	margin: 0;
+}
+#selected-prods li {
+	margin: 0;
+	padding: 0 0 5px 0;
+}
+#selected-prods span {
+	display: inline-block;
+}
+#selected-prods .num {
+	font-weight: bold;
+}
+#selected-prods .remove a {
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-left: 10px;
+	background: url(images/remove.gif);
+	text-indent: -9999px;
+}
+#submit {
+	display: block;
+	width: 124px;
+	height: 31px;
+	margin-top: 20px;
+	border: none;
+	background: url(images/submit-btn.gif);
+	text-indent: -9999px;
+}
+form h2 {
+	padding: 5px;
+	background: #FFFCF3;
+	margin-top: 10px;
+	color: #003F67;
+	font-size: 14px;
+}
+.req {
+	color: #cf2626;
+}
+div.pagination {
+	padding: 10px 25px;
+}
+div.nav-next {
+	text-align:right;
+}
+div.pagination a {
+	font-size: 16px;
+}
+#vid-container {
+	width: 655px;
+	height: 366px;
+}
+#content #vid-thumbs {
+	list-style: none;
+	width: 100%;
+	margin-top: 25px;
+	padding: 0;
+}
+#vid-thumbs li {
+	position: relative;
+	display: inline-block;
+	width: 174px;
+	margin: 0 15px 15px 0;
+	padding: 15px;
+	border: 1px solid #ccc;
+	background: #f6f6f6 url(images/vid-thumb-bg.gif) 0 100% repeat-x;
+	vertical-align: top;
+	height: 225px;
+}
+
+#vid-thumbs li img {
+	display: block;
+	width: 176px;
+	height: 90px;
+	margin: 0 0 10px 0;
+}
+#vid-thumbs h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1.3em;
+	margin-bottom: 0;
+}
+#vid-thumbs p {
+	font-size: 11px;
+	line-height: 1.3em;
+	margin-top: 0;
+}
+#vid-thumbs a {
+	color: #000;
+}
+#vid-thumbs a:hover {
+	color: #018ae1;
+}
+.vid-hover {
+	position: absolute;
+	left: -9999px;
+	top: 10px;
+}
+#vid-thumbs li:hover .vid-hover {
+	left: 10px;
+}
+
+/****************
+Tooltip popup div
+*****************/
+
+.tooltip {
+    position: relative;
+    float: right;
+}
+
+.tooltip .icon {
+    -moz-border-radius: 20px/20px;
+    -webkit-border-radius: 20px 20px;
+    border-radius: 20px/20px;;
+    border: solid 1px white;
+    width:20px;
+    height:20px;
+    color: white;
+    background-color: #023363;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tooltip .tip {
+    background-color: white;
+    display: none;
+    -moz-border-radius: 5px/5px;
+    -webkit-border-radius: 5px 5px;
+    border-radius: 5px/5px;;
+    border: solid 2px #023363;
+    position: absolute;
+    overflow: visible;
+    width: 150px;
+    padding: 3px;
+    left: 30px;
+    vertical-align: middle;
+}
+
+#tip-speed {
+    position: absolute;
+    bottom: 12px;
+
+}
+
+#tip-torque {
+    position: absolute;
+    top: -20px;
+}
+
+#tip-power {
+    position: absolute;
+    top: -6px;
+}
+
+/*****************
+Related blog posts
+*****************/
+
+.related-blog-posts hr {
+    width: 100%;
+    font-weight: bold;
+    text-align: left;
+}
+
+.related-blog-posts h3, h4 {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.related-blog-posts h3 {
+    color: gray;
+    font-weight: normal !important;
+}
+
+.related-blog-posts h4 {
+    color: blue;
+    font-style: normal !important;
+    font-weight: bold;
+    margin-bottom: 0px !important;
+}
+
+/*************
+Find a product
+*************/
+
+.find-product {
+    font-size: 1.2em;
+    color: red;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-left: 137px;
+}
+
+.find-product a{
+    text-decoration: underline;
+    color: red;
+}
+
+/**************
+Motor Match - no results text
+**************/
+
+.no-results {
+    color: #666;
+}
+
+.no-results p {
+    margin: auto;
+}
+
+#no-results-phone {
+    color: blue;
+    font-weight: bold;
+}
+
+.tooltip-2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 23px;
+  height: 23px;
+  background: url(images/q-mark.png);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+}
+.bubble {
+  position: absolute;
+  top: -20px;
+  left: -9999px;
+  width: 175px;
+  padding: 10px;
+  background: #fff;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  
+  font-size: 12px;
+  color: #666;
+}
+.bubble:after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: #fff;
+}
+.tooltip-2:hover .bubble {
+  left: 40px;
+}

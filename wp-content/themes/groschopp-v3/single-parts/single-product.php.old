@@ -1,0 +1,302 @@
+<?php $the_id = get_the_ID() ?>
+<?php $product = get_product($_GET['id']) ?>
+<?php $category = pods('product', get_the_ID()); ?>
+
+<div id="product" class="col-sm-12 col-md-9 pull-right content">
+
+  <?php if(isset($_GET['added'])): ?>
+  <div class="alert alert-success" role="alert">Product #<?php echo $_GET['added'] ?> has been added to your quote cart.</div>
+  <?php endif; ?>
+		  			
+	<div class="row">
+		
+		<div class="col-sm-7">
+			<h1><?php the_title() ?> <?php echo $product->ordering_number ?></h1>
+			
+			<div class="visual text-center">
+        <?php /*
+				<img src="<?php echo pods_image_url(get_post_meta(get_the_ID(), 'product_photo', true), 'null') ?>" alt="<?php echo get_the_title() ?>" />
+        */?>
+        <?php if($product->type_id == 1 && strpos($product->model, "FC") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/AC8060FC/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 1 && strpos($product->model, "NV") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/AC8060NV/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 2 && strpos($product->model, "PM601") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM6013/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 2 && strpos($product->model, "PM801") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM8018/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 2 && strpos($product->model, "PM10816") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM10816/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 2 && strpos($product->model, "PM10818") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM10818/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 3 && strpos($product->model, "RA26") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM8018HV_RA2600T/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 3 && strpos($product->model, "RA30") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM8018HV_RA3000T/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>    
+
+        <?php if($product->type_id == 3 && strpos($product->model, "RA40") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM8018HV_RA4000T/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 3 && strpos($product->model, "RA50") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM8018HV_RA5000T/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 6 && strpos($product->model, "PL73") !== false && strpos($product->model, "FC") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/AC9060FC-PL7300/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 6 && strpos($product->model, "PL73") !== false && strpos($product->model, "NV") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/AC9060NV-PL7300/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 6 && strpos($product->model, "FC") !== false && substr($product->model, -1) === "i"): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/AC8060FC-PL6200i/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 6 && strpos($product->model, "NV") !== false && substr($product->model, -1) === "i" ): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/AC8060NV-PL6200i/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 7 && strpos($product->model, "PL73") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM8018LV-PL7300/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 7 && strpos($product->model, "PL52") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM8018HV-PL5200i/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 7 && strpos($product->model, "PL62") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM8018HV-PL6200i/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 7 && strpos($product->model, "PL81") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM8018LV-PL8100i/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 8 && strpos($product->model, "PS19") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM8018HV-PS1900/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 8 && strpos($product->model, "PS21") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM8018LV-PS2100/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 8 && strpos($product->model, "PS23") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM8018LV-PS2300/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 11 && strpos($product->model, "NV") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/AC8060NV-RP7300/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 11 && strpos($product->model, "FC") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/AC8060FC-RP7300/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 12 && strpos($product->model, "NV") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/AC9060NV-RA4000/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 12 && strpos($product->model, "FC") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/AC9060FC-RA4000/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 14): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/PM8018HV-RP7300/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 18 && strpos($product->model, "NV") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/AC9060NV-PS2100/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 18 && strpos($product->model, "FC") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/AC9060FC-PS2100/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 23): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/BL6520/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 24 && strpos($product->model, "PL73") !== false): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/BL6520-PL7305/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 24 && substr($product->model, -1) === "i" ): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/BL6560-PL6200i/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 6 && substr($product->model, -2) === "iP" ): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/AC8060FC-PL6200iP/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 25): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/BL6560-PS2100/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+
+        <?php if($product->type_id == 26): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/BL6520-RA3000T/index.html" width="325" height="313"></iframe>  
+        <?php endif ?>
+
+        <?php if($product->type_id == 27): ?>
+        <iframe src="<?php bloginfo('url') ?>/data/keyshot/BL6520-RP7300/index.html" width="325" height="313"></iframe> 
+        <?php endif ?>
+        <img src="<?php bloginfo('template_url') ?>/images/360.png" alt="360">
+			</div>
+			
+			<ul class="buttons nav nav-justified">
+				<li><button class="opt-0 selected" type="button">Features</button></li>
+				<li><button class="opt-1" type="button">Add Ons</button></li>
+				<li><button class="opt-2" type="button">Downloads</button></li>
+			</ul>
+			
+			<div class="options">
+				<div class="opt-0">
+					<h3 class="show-print">Features</h3>
+          <?php $features = get_post_meta($the_id, 'features', true) ?>
+          <?php echo $features ?>
+  			</div>
+  			<div class="opt-1" style="display: none;">
+  				<h3 class="show-print">Add Ons</h3>
+          <?php $addons = get_post_meta($the_id, 'options', true) ?>
+          <?php echo $addons ?>
+  			</div>
+  			<div class="opt-2" style="display: none;">
+          <?php $nofiles = true; ?>
+          <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/data/other/Cad_Pdf/'.$product->cadfile.'.pdf')): ?>
+          <a href="<?php get_bloginfo('url') ?>/data/other/Cad_Pdf/<?php echo $product->cadfile ?>.pdf" target="_blank">Cad_Pdf</a>
+          <?php $nofiles = false; ?>
+          <?php endif; ?>
+          <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/data/other/Cad_Pdf/'.$product->cadfile.'.PDF')): ?>
+          <a href="<?php get_bloginfo('url') ?>/data/other/Cad_Pdf/<?php echo $product->cadfile ?>.PDF" target="_blank">Cad_Pdf</a>
+          <?php $nofiles = false; ?>
+          <?php endif; ?>
+          
+          <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/data/other/3DCad_IGES/'.$product->cadfile.'.zip')): ?>
+          <a href="<?php get_bloginfo('url') ?>/data/other/3DCad_IGES/<?php echo $product->cadfile ?>.zip">3DCad_IGES</a>
+          <?php $nofiles = false; ?>
+          <?php endif; ?>
+          <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/data/other/3DCad_STEP/'.$product->cadfile.'.zip')): ?>
+          <a href="<?php get_bloginfo('url') ?>/data/other/3DCad_STEP/<?php echo $product->cadfile ?>.zip">3DCad_STEP</a>
+          <?php $nofiles = false; ?>
+          <?php endif; ?>
+          <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/data/other/Cad_Dwg/'.$product->cadfile.'.zip')): ?>
+          <a href="<?php get_bloginfo('url') ?>/data/other/Cad_Dwg/<?php echo $product->cadfile ?>.zip">Cad_Dwg</a>
+          <?php $nofiles = false; ?>
+          <?php endif; ?>
+          <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/data/other/Cad_Dxf/'.$product->cadfile.'.zip')): ?>
+          <a href="<?php get_bloginfo('url') ?>/data/other/Cad_Dxf/<?php echo $product->cadfile ?>.zip">Cad_Dxf</a>
+          <?php $nofiles = false; ?>
+          <?php endif; ?>
+          
+          <?php if($nofiles == true): ?>
+          Not applicable to this application
+          <?php endif; ?>
+  			</div>
+			</div>
+			
+		</div>
+  		
+  		<div class="col-sm-5">
+  		
+  			<section class="specs text-center">
+  				<h3>Product Specs</h3>
+  				<div>
+  					<ul>
+  						<li>Model #<?php echo $product->model ?></li>
+  						<li>Torque (in-lbs)- <?php echo $product->torqk ?></li>
+  						<li>Voltage- <?php echo $product->voltage ?></li>
+  						<li>Power (hp)- <?php echo $product->system_hp ?></li>
+  						<li>Speed (rpm)- <?php echo $product->output_speed ?></li>
+  						<li>Phase- <?php echo $product->phase ?></li>
+  					</ul>
+  					<p>
+              CAD File: 
+              <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/data/other/Cad_Pdf/'.$product->cadfile.'.pdf')): ?>
+              <a class="pdf" href="<?php get_bloginfo('url') ?>/data/other/Cad_Pdf/<?php echo $product->cadfile ?>.pdf" target="_blank">Cad PDF</a>
+              <?php $nofiles = false; ?>
+              <?php endif; ?>
+              <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/data/other/Cad_Pdf/'.$product->cadfile.'.PDF')): ?>
+              <a class="pdf" href="<?php get_bloginfo('url') ?>/data/other/Cad_Pdf/<?php echo $product->cadfile ?>.PDF" target="_blank">Cad PDF</a>
+              <?php $nofiles = false; ?>
+              <?php endif; ?>
+            </p>
+  					<p>
+              Data Sheet:
+              <?php if(strlen($product->ordering_number) == 4): ?>
+              <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/data/other/Performance/0'.$product->ordering_number.'.pdf')): ?>
+              <a class="pdf" href="<?php get_bloginfo('url') ?>/data/other/Performance/0<?php echo $product->ordering_number ?>.pdf" target="_blank">Performance Data Curve</a>
+              <?php endif; ?>
+              <?php else: ?>
+              <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/data/other/Performance/'.$product->ordering_number.'.pdf')): ?>
+              <a class="pdf" href="<?php get_bloginfo('url') ?>/data/other/Performance/<?php echo $product->ordering_number ?>.pdf" target="_blank">Performance Data Curve</a>
+              <?php endif; ?> 
+              <?php endif; ?>
+            </p>
+  					<p>
+              Wiring Diagram: 
+              <?php if(in_array($product->type_id, array(1,6,11,12,18))): ?>
+              <a class="pdf" href="<?php get_bloginfo('url') ?>/data/other/AC-Motor-Connection-Diagram.pdf" target="_blank">AC Connection Diagram</a>
+              <?php endif; ?>
+              
+              <?php if(in_array($product->type_id, array(2,3,7,8,14,16))): ?>
+              <a class="pdf" href="<?php get_bloginfo('url') ?>/data/other/DC-Motor-Connection-Diagram.pdf" target="_blank">PM Connection Diagram</a>
+              <?php endif; ?>
+
+              <?php if(in_array($product->type_id, array(23,24,25,26,27))): ?>
+              <a class="pdf" href="<?php get_bloginfo('url') ?>/data/other/brushless-dc-motor-connection-diagram.pdf" target="_blank">Brushless Connection Diagram</a>
+              <?php endif; ?>
+            </p>
+	  				<a class="customize" href="<?php echo get_permalink(4917).'?id='.$product->id ?>">Customize It</a>
+	  				<a class="add-to" href="<?php bloginfo('template_url'); ?>/quote-add.php?id=<?php echo $product->id ?>">Add to Quote</a>
+	  				<span class="clock">All models ship within 48 hours</span>
+	  			</div>
+  			</section>
+  			
+        <?php /*
+  			<h3>Related Items</h3>
+  			<div class="row related">
+  				
+  				<div class="col-sm-6">
+  					<img src="<?php bloginfo('template_url'); ?>/images/related.jpg" alt="">
+  					<p>Controls - short description about controls to go here. short description about controls to go here. short description.</p>
+  					<a href="">View More</a>
+  				</div>
+  				
+  				<div class="col-sm-6">
+  					<img src="<?php bloginfo('template_url'); ?>/images/related.jpg" alt="">
+  					<p>Controls - short description about controls to go here. short description about controls to go here. short description.</p>
+  					<a href="">View More</a>
+  				</div>
+  			
+  			</div>
+        */ ?>
+  		
+  		</div>
+  		
+  	</div>
+		
+		</div>
+		
+		<?php get_sidebar() ?>
+		
+	</div>
+
+</div>
+
+</div>
