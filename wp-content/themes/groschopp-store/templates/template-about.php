@@ -10,19 +10,15 @@ get_header('new');
         </div>
     </div>
 </section>
-
+<?php 
+    if(have_rows('custom_gallery')): 
+?>
 <section class="Gallery-grp">
-    <img src="<?php echo get_template_directory_uri() ?>/images/gimg1.png" alt="" />
-    <img src="<?php echo get_template_directory_uri() ?>/images/gimg2.png" alt="" />
-    <img src="<?php echo get_template_directory_uri() ?>/images/gimg2.png" alt="" />
-    <img src="<?php echo get_template_directory_uri() ?>/images/gimg3.png" alt="" />
-    <img src="<?php echo get_template_directory_uri() ?>/images/gimg4.png" alt="" />
-    <img src="<?php echo get_template_directory_uri() ?>/images/gimg5.png" alt="" />
-    <img src="<?php echo get_template_directory_uri() ?>/images/gimg6.png" alt="" >
-    <img src="<?php echo get_template_directory_uri() ?>/images/gimg7.png" alt="" />
-    <img src="<?php echo get_template_directory_uri() ?>/images/gimg8.png" alt="" />
-    <img src="<?php echo get_template_directory_uri() ?>/images/gimg9.png" alt="" />
+    <?php while(have_rows('custom_gallery')):the_row(); ?>
+    <img src="<?php echo get_sub_field('gallery_images');  ?>" alt="" />
+    <?php endwhile; ?>
 </section>
+<?php endif; ?>
 
 <section class="burger things-grp">
    <div class="container">
@@ -68,34 +64,17 @@ get_header('new');
                 <img src="<?php echo get_template_directory_uri() ?>/images/img_1.png" alt="" class="ml-2"/>
            </div>
         </div>
-       <div class="row mt-5">
-           <div class="col-lg-4 text-center">
-              <h3> 100,000+ </h3>
-              <span class="text-white"> standard motor options </span>
-           </div>
-           <div class="col-lg-4 text-center">
-              <h3> 8,000 </h3>
-              <span class="text-white"> standard motor options </span>
-           </div>
-           <div class="col-lg-4 text-center">
-              <h3> 200 </h3>
-              <span class="text-white"> Employees </span>
-           </div>
-       </div>
-       <div class="row mt-2">
-           <div class="col-lg-4 text-center">
-              <h3> 101,000 </h3>
-              <span class="text-white"> ft. facility </span>
-           </div>
-           <div class="col-lg-4 text-center">
-              <h3> 48 hrs </h3>
-              <span class="text-white"> Standard and modified motors </span>
-           </div>
-           <div class="col-lg-4 text-center">
-              <h3> 1930s </h3>
-              <span class="text-white"> Industry experience dating back to the </span>
-           </div>
-       </div>
+        <?php if(have_rows('counter_repeater')):?>
+            <div class="row mt-5">
+                <?php while(have_rows('counter_repeater')):the_row(); ?>
+                <div class="col-lg-4 text-center">
+                    <h3> <?php echo get_sub_field('counter_number'); ?> </h3>
+                    <span class="text-white">  <?php echo get_sub_field('counter_name'); ?> </span>
+                </div>
+                <?php endwhile; ?>
+            </div>
+       <?php endif; ?>
+       
 
        <div class="row mt-5">
            <div class="col-lg-3">

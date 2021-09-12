@@ -14,8 +14,8 @@
                     <figure> <img src="<?php echo get_template_directory_uri() ?>/images/Frame.png" alt="" /> </figure>
                     <div>
                        <p class="text-white"> GROSCOPP 712.722.4135 800.829.4135 Sioux Center, IA USA </p>
-                        <p><a href="javascript:;" class="text-white"> Privacy Policy </a></p>
-                        <p><a href="javascript:;" class="text-white"> Terms and Conditions </a></p>
+                        <p><a href="<?php echo home_url().'/about/return-policy/'?>" class="text-white"> Privacy Policy </a></p>
+                        <p><a href="<?php echo home_url().'/about/terms-conditions/'?>" class="text-white"> Terms and Conditions </a></p>
                     </div>    
 
                     <div class="social-bookmarks">

@@ -359,6 +359,7 @@ body p {
   justify-content: end;
   color: #01253c;
   align-items: center;
+  float: right;
 }
 .About-grp {
   background-color: #f5f5f5;
