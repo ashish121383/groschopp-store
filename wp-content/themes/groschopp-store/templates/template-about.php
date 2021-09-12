@@ -114,4 +114,51 @@ get_header('new');
     </div>
 </section>
 
+<section class="burger career-grp">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="<?php echo get_template_directory_uri() ?>/images/career-img.png" alt="">
+            </div>
+            <div class="career-content">
+                <h2> CAREERS </h2>
+                <p> Dolore maiores ipsam sint maiores a omnis. Nostrum veniam quaerat rerum neque rerum accusantium et cupiditate
+                    eligendi. Tenetur qui et in reprehenderit eos quia hic non. Quia cupiditate ut et quam beatae unde consequatur 
+                    dolores. Illum magni necessitatibus. </p>
+                    <div class="eng-group pb-0">
+                        <a href="javascript:;" class="btn btn-lg"> 
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.47572 5.19504C6.92031 4.8471 7.56278 4.92545 7.91072 5.37004L12.6807 11.37C12.984 11.739 12.984 12.271 12.6807 12.64L7.68072 18.64C7.49036 18.8686 7.20815 19.0005 6.91072 19C6.67707 19.0005 6.45063 18.9191 6.27072 18.77L6.2688 18.7684C5.84451 18.4149 5.78717 17.7843 6.14072 17.36L10.6207 12L6.30072 6.63004C5.95278 6.18545 6.03113 5.54298 6.47572 5.19504ZM14.9107 5.37004L19.6907 11.37C19.9911 11.7414 19.987 12.2734 19.6807 12.64L14.6807 18.64C14.4904 18.8686 14.2081 19.0005 13.9107 19C13.6783 19.0033 13.452 18.9255 13.2707 18.78L13.2688 18.7784C12.8445 18.4249 12.7872 17.7943 13.1407 17.37L17.6207 12L13.3507 6.63005L13.3474 6.62592C13.0015 6.19536 13.0702 5.56592 13.5007 5.22004L13.5048 5.21671C13.9354 4.87083 14.5648 4.93948 14.9107 5.37004Z" fill="white"/>
+                        </svg> &nbsp;
+                        <span> Lern More </span> </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="About-grp">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-content">
+                   <span> Our </span>
+                   <h2> HISTORY </h2>
+                   <p> Partnering with Groschopp means working with a small electric motor and gear motor manufacturer that strives for the 
+                       American standard of quality. It means having a team of motor experts to find the best standard or custom solution 
+                       for your application. It means 48-hour turnaround availability for small orders and samples.</p>
+                   <a href="javascript:;" class="btn btn-lg"> 
+                      Lern More 
+                   </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-img">
+                   <img src="<?php echo get_template_directory_uri() ?>/images/about_img.png" alt="" class="img-responsive" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php get_footer('new'); 

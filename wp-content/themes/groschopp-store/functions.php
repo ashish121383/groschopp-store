@@ -47,7 +47,8 @@ if ( ! function_exists( 'groschopp_store_setup' ) ) :
 			'primary' => esc_html__( 'Primary', 'groschopp-store' ),
 			'myaccount' => esc_html__( 'MyAccount', 'groschopp-store' ),
 			'mobile' => esc_html__( 'Mobile', 'groschopp-store' ),
-			'sub-nav' => esc_html__( 'Sub-Navigarion', 'groschopp-store' )
+			'sub-nav' => esc_html__( 'Sub-Navigarion', 'groschopp-store' ),
+			'footer' => esc_html__( 'Footer Menu', 'groschopp-store' ),
 		));
 
 		/*

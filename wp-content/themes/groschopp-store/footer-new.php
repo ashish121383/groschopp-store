@@ -12,9 +12,8 @@
              <div class="col-lg-4">
                 <div class="d-flex">
                     <figure> <img src="<?php echo get_template_directory_uri() ?>/images/Frame.png" alt="" /> </figure>
-                    
                     <div>
-                       <p> GROSCOPP 712.722.4135 800.829.4135 Sioux Center, IA USA </p>
+                       <p class="text-white"> GROSCOPP 712.722.4135 800.829.4135 Sioux Center, IA USA </p>
                         <p><a href="javascript:;" class="text-white"> Privacy Policy </a></p>
                         <p><a href="javascript:;" class="text-white"> Terms and Conditions </a></p>
                     </div>    
@@ -26,9 +25,9 @@
              </div>
              <div class="col-lg-8">
                   <div class="contact-grp">
-                      <a href="javascript:;" class="btn btn-lg"> Contact Us </a>
+                      <a href="<?php echo home_url().'/contact-us'?>" class="btn btn-lg"> Contact Us </a>
 
-                      <a href="javascript:;" class="btn btn-lg"> Upload Specs </a>
+                      <a href="<?php echo home_url()?>" class="btn btn-lg"> Upload Specs </a>
 
                     <form id="search" method="get" action="<?php bloginfo('url') ?>">
                         <input type="search" name="s" placeholder="Search">
@@ -40,13 +39,23 @@
 
          <div class="row">
             <div class="col-lg-12">
-                 <ul class="bottom-menu">
+            <?php 
+                wp_nav_menu( 
+                    array( 
+                        'menu' => 'menu',
+                        'container' => false,
+                        'menu_id' => 'menu',
+                        'menu_class'=>'bottom-menu',
+                        'theme_location'=>'footer' ) );
+            ?>
+            
+                 <!-- <ul class="bottom-menu">
                      <li><a href="javascript:;"> Menu 1</a></li>
                      <li><a href="javascript:;"> Menu 1</a></li>
                      <li><a href="javascript:;"> Menu 1</a></li>
                      <li><a href="javascript:;"> Menu 1</a></li>
                      <li><a href="javascript:;"> Menu 1</a></li>
-                 </ul>
+                 </ul> -->
             </div>
          </div>
      </div>

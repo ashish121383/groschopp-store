@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('new'); ?>
 
 <div class="row">
 
@@ -41,9 +41,9 @@
 	<?php endif; ?>
 
 	<?php if(!is_page('customize')): ?>
-		<?php get_sidebar(); ?>
+		<?php //get_sidebar(); ?>
 	<?php endif ?>
 
 </div>
 
-<?php get_footer(); ?>
+<?php get_footer('new'); ?>
