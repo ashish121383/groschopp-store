@@ -154,11 +154,17 @@ add_action( 'widgets_init', 'groschopp_store_widgets_init' );
 function groschopp_store_scripts() {
 	wp_enqueue_style( 'fontawesome-style', get_template_directory_uri() . '/fontawesome-all.min.css' );
 	wp_enqueue_style( 'groschopp-store-style', get_stylesheet_uri() );
+	
+	wp_enqueue_style( 'slick-style-sheet', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css' );
+	wp_enqueue_style( 'slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css' );
 	wp_enqueue_style( 'custom-style-sheet', get_template_directory_uri() . '/css/custom.css' );
 	
 	wp_deregister_script( 'jquery' );
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), '3.5.1', false );
+	wp_enqueue_script( 'slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array(), '20151215', true );
+	
 	wp_enqueue_script( 'groschopp-store-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'groschopp-store-navigation', get_template_directory_uri() . '/js/scripts.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'groschopp-store-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

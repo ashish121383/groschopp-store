@@ -62,19 +62,19 @@
        <div class="row">
            <div class="col-lg-2"></div>
            <div class="col-lg-8">
-              <div class="slider" id="slider">
+              <div class="home-slider" id="home-slider">
                  <div class="slider_item">
                      <p> DID YOU KNOW </p>
                      <h4> Universal Motors have high power-to weight ratios, potentially reachng speeds of 20,000rpm+ </h4>
                  </div>
-                 <!-- <div class="slider_item">
+                 <div class="slider_item">
                      <p> DID YOU KNOW </p>
                      <h4> Universal Motors have high power-to weight ratios, potentially reachng speeds of 20,000rpm+ </h4>
                  </div>
                  <div class="slider_item">
                      <p> DID YOU KNOW </p>
                      <h4> Universal Motors have high power-to weight ratios, potentially reachng speeds of 20,000rpm+ </h4>
-                 </div> -->
+                 </div>
               </div>
            </div>
            <div class="col-lg-2"></div>

@@ -290,16 +290,18 @@ $(document).ready(function() {
   })
   */
  
-$('.slider').slick({
-	dots: true,
-});
-  
-// $('#slider').slick({
-// 	infinite: false,
-// 	slidesToShow: 1,
-// 	slidesToScroll: 1,
-// 	autoplay: true,
-// 	autoplaySpeed: 2000,
+// $('.slider').slick({
+// 	dots: true,
 // });
+  
+$('#home-slider').slick({
+	infinite: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	autoplay: true,
+	autoplaySpeed: 2000,
+	dots: true,
+	arrows:false,
+});
 
 })

@@ -20,9 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 // get_header( 'shop' );
 get_header( 'new' );
+
+/* grab the url for the full size featured image */
+$upload_dir = wp_upload_dir();
+$featured_img_url = $upload_dir['baseurl'].'/2021/09/product-bg.jpeg'; 
 ?> 
 <div class="product-grp">
-    <div class="product-banner" style="background-image:url('http://groschope.local/wp-content/uploads/2021/09/product-bg.png')">
+    <div class="product-banner" style="background-image:url('<?php echo $featured_img_url ; ?>')">
         <div class="container">
             <div class="row">
                 <h2> Products </h2>
@@ -353,7 +357,7 @@ get_header( 'new' );
 
     </div>
 </div>
-<?php 
+<?php
 // get_footer( 'shop' ); 
 get_footer( 'new' ); 
 ?>
